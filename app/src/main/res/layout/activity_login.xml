@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoginTitle"
+        android:text="Login"
+        android:textSize="15pt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtLoginEmail"
+        android:layout_below="@id/tvLoginTitle"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtLoginPassword"
+        android:layout_below="@id/edtLoginEmail"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLoginSubmit"
+        android:text="Login"
+        android:layout_below="@id/edtLoginPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvLoginNewUser"
+    android:text="New User?"
+    android:layout_below="@id/edtLoginPassword"
+    android:layout_marginStart="30dp"
+
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoginForgotPassword"
+        android:text="ForgotPassword?"
+        android:layout_below="@id/edtLoginPassword"
+        android:layout_alignEnd="@id/edtLoginPassword"
+         />
+
+
+
+
+</RelativeLayout>

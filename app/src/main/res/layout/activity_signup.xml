@@ -75,7 +75,19 @@
         android:layout_marginTop="50dp"
         />
 
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvSignupLoginLink"
+    android:text="Existing User?"
+    android:layout_below="@id/btnSignupSubmit"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:textColor="@color/blue"
 
+     />
 
 
 
