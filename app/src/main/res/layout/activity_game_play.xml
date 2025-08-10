@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GamePlayActivity">
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:rowCount="1"
+        android:columnCount="2"
+         >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:id="@+id/tvGameActivityBetAmount"
+            android:layout_columnWeight="1"
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:id="@+id/tvGameActivityWinningAmount"
+            android:layout_columnWeight="1"
+            />
+
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:columnCount="3"
+
+        android:paddingLeft="20dp"
+        android:paddingEnd="20dp"
+        android:rowCount="4"
+        android:padding="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/btnGamePlay1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay4"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay5"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay6"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:layout_margin="5dp"
+            android:id="@+id/btnGamePlay7"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:layout_margin="5dp"
+            android:id="@+id/btnGamePlay8"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay9"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+             />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay10"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btnGamePlay11"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <ImageButton
+            android:layout_margin="5dp"
+            android:id="@+id/btnGamePlay12"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+
+    </GridLayout>
+
+</LinearLayout>

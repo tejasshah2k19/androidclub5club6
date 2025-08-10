@@ -35,18 +35,23 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="ScoreBoard"
+            android:id="@+id/btnHomeScoreBorad"
             />
 
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Start Game"
+            android:id="@+id/btnHomeStartGame"
+
             />
 
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Logout"
+            android:id="@+id/btnHomeLogout"
+
             />
 
 
