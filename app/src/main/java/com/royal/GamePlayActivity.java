@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,14 +13,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class GamePlayActivity extends AppCompatActivity {
 
     ImageButton imgBtn []  = new ImageButton[12];
-    EditText edtBetAmt;
 
+    TextView tvBetAmt;
+    TextView tvWinningAmt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +47,17 @@ public class GamePlayActivity extends AppCompatActivity {
         imgBtn[10] = findViewById(R.id.btnGamePlay11);
         imgBtn[11] = findViewById(R.id.btnGamePlay12);
 
-        edtBetAmt = findViewById(R.id.edtGamePlayBetAmt);
+        tvBetAmt = findViewById(R.id.tvGameActivityBetAmount);
+        tvWinningAmt = findViewById(R.id.tvGameActivityWinningAmount);
 
 
         Intent intent = getIntent();
         int amount = intent.getIntExtra("amount",0);
         int winingAmount = 0 ;
+
+        tvBetAmt.setText("Bet Amount : "+amount+"");
+        tvWinningAmt.setText("0");
+
 
         HashSet<Integer> btns = new HashSet<>();
 
@@ -77,9 +82,9 @@ public class GamePlayActivity extends AppCompatActivity {
                     }else{
                         im.setBackground(getResources().getDrawable(R.drawable.diamond));
 
-                        int x =  Integer.parseInt( edtBetAmt.getText().toString());
+                        int x =   amount;
                         x = x *2;
-                        edtBetAmt.setText(x+"");
+                        tvWinningAmt.setText(x+"");
                         im.setEnabled(false);
                     }
                  }

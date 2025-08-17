@@ -19,7 +19,8 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
+            android:textSize="15pt"
             android:id="@+id/tvGameActivityBetAmount"
             android:layout_columnWeight="1"
             />
@@ -27,9 +28,10 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:id="@+id/tvGameActivityWinningAmount"
             android:layout_columnWeight="1"
+            android:textSize="15pt"
             />
 
 
