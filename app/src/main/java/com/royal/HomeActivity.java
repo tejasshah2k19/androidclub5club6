@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -18,6 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class HomeActivity extends AppCompatActivity {
 
     Button btnStartGame,btnScoreBoard,btnLogout;
+    TextView tvFirstName,tvCredit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,15 @@ public class HomeActivity extends AppCompatActivity {
         btnStartGame = findViewById(R.id.btnHomeStartGame);
         btnScoreBoard = findViewById(R.id.btnHomeScoreBorad);
         btnLogout = findViewById(R.id.btnHomeLogout);
+        tvFirstName = findViewById(R.id.tvHomeFirstName);
+        tvCredit = findViewById(R.id.tvHomeCredit);
 
+        Intent intent  = getIntent();
+        String firstName = intent.getStringExtra("firstName");
+        int credit = intent.getIntExtra("credit",0);
+
+        tvFirstName.setText(firstName);
+        tvCredit.setText(credit+"");
 
         btnStartGame.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -15,7 +15,10 @@ public interface SessionService {
     //input ?
     //response ?
     //http method?
- @POST("/api/auth/signup")
+  @POST("/api/auth/signup")
    Call<ResponseModel> signupApi(@Body UserModel userModel);
+
+  @POST("/api/auth/login")
+  Call<ResponseModel> loginApi(@Body UserModel userModel); //LoginModel
 
 }
