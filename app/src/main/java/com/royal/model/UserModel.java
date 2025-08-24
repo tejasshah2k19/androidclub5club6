@@ -1,6 +1,7 @@
 package com.royal.model;
 
 public class UserModel {
+    private String _id;
     private String firstName;
     private String lastName;
     private String email;
@@ -45,5 +46,13 @@ public class UserModel {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
     }
 }

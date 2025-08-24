@@ -2,6 +2,7 @@ package com.royal;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,9 +40,16 @@ public class HomeActivity extends AppCompatActivity {
         tvFirstName = findViewById(R.id.tvHomeFirstName);
         tvCredit = findViewById(R.id.tvHomeCredit);
 
-        Intent intent  = getIntent();
-        String firstName = intent.getStringExtra("firstName");
-        int credit = intent.getIntExtra("credit",0);
+//        Intent intent  = getIntent();
+//        String firstName = intent.getStringExtra("firstName");
+//        int credit = intent.getIntExtra("credit",0);
+
+        //read data from shared pref
+
+        SharedPreferences sp = getSharedPreferences("diamondgame",MODE_PRIVATE);
+        String firstName = sp.getString("firstName","");
+        int credit = sp.getInt("credit",0);
+
 
         tvFirstName.setText(firstName);
         tvCredit.setText(credit+"");
@@ -80,7 +88,18 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+    btnLogout.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            SharedPreferences sp = getSharedPreferences("diamondgame",MODE_PRIVATE);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.clear();
+            editor.apply();
 
+            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+    });
 
 
 

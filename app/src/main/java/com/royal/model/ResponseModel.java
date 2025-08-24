@@ -2,6 +2,7 @@ package com.royal.model;
 
 public class ResponseModel {
  private   String message;
+
     private    String token;
     private UserModel user;
 
@@ -28,4 +29,6 @@ public class ResponseModel {
     public void setUser(UserModel user) {
         this.user = user;
     }
+
+
 }

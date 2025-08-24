@@ -1,9 +1,11 @@
 package com.royal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -18,7 +20,7 @@ import java.util.HashSet;
 public class GamePlayActivity extends AppCompatActivity {
 
     ImageButton imgBtn []  = new ImageButton[12];
-
+    Button btnCashOut;
     TextView tvBetAmt;
     TextView tvWinningAmt;
     @Override
@@ -50,12 +52,13 @@ public class GamePlayActivity extends AppCompatActivity {
         tvBetAmt = findViewById(R.id.tvGameActivityBetAmount);
         tvWinningAmt = findViewById(R.id.tvGameActivityWinningAmount);
 
+        btnCashOut = findViewById(R.id.btnGamePlayCashout);
 
         Intent intent = getIntent();
         int amount = intent.getIntExtra("amount",0);
         int winingAmount = 0 ;
 
-        tvBetAmt.setText("Bet Amount : "+amount+"");
+        tvBetAmt.setText(amount+"");
         tvWinningAmt.setText("0");
 
 
@@ -77,13 +80,20 @@ public class GamePlayActivity extends AppCompatActivity {
                     if(btns.contains(view.getId())){
                         im.setBackground(getResources().getDrawable(R.drawable.blast));
                         //
+                        SharedPreferences sp = getSharedPreferences("diamondgame",MODE_PRIVATE);
+                        String _id = sp.getString("userId","-1");
+
+                        //api calling
+
+
+
                         Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
                         startActivity(intent);
                     }else{
                         im.setBackground(getResources().getDrawable(R.drawable.diamond));
 
-                        int x =   amount;
-                        x = x *2;
+                        int x =  Integer.parseInt( tvWinningAmt.getText().toString());
+                        x = x + amount;
                         tvWinningAmt.setText(x+"");
                         im.setEnabled(false);
                     }
